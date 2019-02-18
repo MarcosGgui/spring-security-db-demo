@@ -41,12 +41,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     return new PasswordEncoder(){
       @Override
       public String encode(CharSequence charSequence) {
-        return null;
+        return charSequence.toString();
       }
 
       @Override
       public boolean matches(CharSequence charSequence, String s) {
-        return false;
+        return true;
       }
     };
   }

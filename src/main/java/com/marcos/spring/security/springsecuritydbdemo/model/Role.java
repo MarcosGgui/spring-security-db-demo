@@ -13,11 +13,14 @@ public class Role{
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "roleId")
+  @Column(name = "role_id")
   private Integer roleId;
 
   @Column(name = "role")
   private String role;
+
+  public Role() {
+  }
 
   public Integer getRoleId() {
     return roleId;
